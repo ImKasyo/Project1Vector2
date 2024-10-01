@@ -18,6 +18,7 @@ public:
 	void PuchFront(int value); //Добавил 1-вого значения на начало массива
 	void PushFront(int index, int value); //Добавление по индексу, где индекс и значение передается как параметр
 	void DeleteIndex(int index); //удаление по индексу
+	void AddArrPushBack(int* arr, int size);
 };
 
 /*
