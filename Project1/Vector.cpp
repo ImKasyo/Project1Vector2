@@ -115,6 +115,18 @@ void Vector::DeleteIndex(int index)
 	size--;
 }
 
-void Vector::AddArrPushBack(int* arr, int size)
+void Vector::AddArrPushBack(int* addArr, int addSize)
 {
+	int* temp = new int[size + addSize];
+	for (int i = 0; i < size; i++) {
+		temp[i] = arr[i];
+	}
+
+	for (int i = 0; i < addSize; i++) {
+		temp[size + i] = addArr[i];
+	}
+	delete[] arr;
+	temp = arr;
+	size += addSize;
+
 }
