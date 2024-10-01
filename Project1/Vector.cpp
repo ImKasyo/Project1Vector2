@@ -101,6 +101,15 @@ void Vector::PushFront(int index, int value)
 
 void Vector::DeleteIndex(int index)
 {
+	int* temp = new int[size - 1];
+	for (int i = 0, j = 0; i < size; i++) {
+		if (i != index) {
+			temp[j] = arr[i];
+			j++;
+			
+		}
+
+	}
 }
 
 void Vector::AddArrPushBack(int* arr, int size)
