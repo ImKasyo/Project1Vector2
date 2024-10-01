@@ -110,6 +110,9 @@ void Vector::DeleteIndex(int index)
 		}
 
 	}
+	delete[] arr;
+	arr = temp;
+	size--;
 }
 
 void Vector::AddArrPushBack(int* arr, int size)
