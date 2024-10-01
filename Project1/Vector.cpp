@@ -85,6 +85,18 @@ void Vector::PuchFront(int value)
 
 void Vector::PushFront(int index, int value)
 {
+	int* temp = new int[size + 1];
+	for (int i = 0; i < size; i++) {
+		temp[i] = arr[i];
+	}
+	temp[index] = value;
+
+	for (int i = index; i < size; i++) {
+		temp[i + 1] = arr[i];
+	}
+	delete[] arr;
+	arr = temp;
+	size++;
 }
 
 void Vector::DeleteIndex(int index)
