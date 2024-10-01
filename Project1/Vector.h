@@ -15,6 +15,7 @@ public:
 	void PushBack(int a);
 	int PopBack();
 	
+	void PuchFront(int value); //Добавил 1-вого значения на начало массива
 };
 
 /*
