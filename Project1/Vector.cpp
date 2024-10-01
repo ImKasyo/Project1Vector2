@@ -70,3 +70,27 @@ int Vector::PopBack()
 
 	return el;
 }
+
+void Vector::PuchFront(int value)
+{
+	int* temp = new int[size + 1];
+	for (int i = 1; i < size + 1; i++) {
+		temp[i] = arr[i];
+	}
+	value = temp[0];
+	delete[] arr;
+	temp = arr;
+	size++;
+}
+
+void Vector::PushFront(int index, int value)
+{
+}
+
+void Vector::DeleteIndex(int index)
+{
+}
+
+void Vector::AddArrPushBack(int* arr, int size)
+{
+}
