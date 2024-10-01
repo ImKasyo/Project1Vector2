@@ -77,9 +77,9 @@ void Vector::PuchFront(int value)
 	for (int i = 1; i < size + 1; i++) {
 		temp[i] = arr[i];
 	}
-	value = temp[0];
+	temp[0] = value;
 	delete[] arr;
-	temp = arr;
+	arr = temp;
 	size++;
 }
 
@@ -126,7 +126,7 @@ void Vector::AddArrPushBack(int* addArr, int addSize)
 		temp[size + i] = addArr[i];
 	}
 	delete[] arr;
-	temp = arr;
+	arr = temp;
 	size += addSize;
 
 }
